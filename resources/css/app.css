@@ -45,21 +45,25 @@ main > div:first-child {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-    color: #2d3748;
 }
 
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
+    font-weight: bold;
 }
 
 .card {
-    background-color: lightblue;
+    background-color: rgb(73, 199, 41);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.2);
 }
 
 .card img {
@@ -73,22 +77,65 @@ main > div:first-child {
     padding: 10px;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #1a202c;
+    color: #d9661e;
+    display: flex;
+    justify-content:center;
 }
 
 .card p {
     padding: 5px;
-    color: #3182ce;
+    color: #ce31af;
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
 }
 
-footer {
-    background-color: lightblue;
-    color: black;
+.home_pic{
+    width: 100%;
+}
+
+.home_title{
+    color: rgb(50, 88, 254);
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    margin-top: auto;
+}
+
+span{
+    color:gray;
+    font-weight: lighter;
+}
+
+
+.prod_main_cont{
+    display: flex;
+    justify-content: space-between;
+    color: red;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.main_sp{
+    color: rgb(187, 39, 39);
+    font-weight: bold;
+}
+
+header a{
+    transition: 0.5s;
+}
+
+header a:hover{
+    transform: scale(1.5);
+    color: rgb(17, 210, 104);
+    transition: 0.5s;
+}
+
+.functions a{
+    transition: 0.5s;
+}
+
+.functions a:hover{
+    transform: scale(1.5);
+    color: rgb(28, 198, 90);
+    transition: 0.5s;  
 }

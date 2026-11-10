@@ -24,8 +24,5 @@
             @endforeach
         </div>
     </main>
-    <footer>
-        Copyright Рудин Святослав Иванович 2026
-    </footer>
 </body>
 </html>

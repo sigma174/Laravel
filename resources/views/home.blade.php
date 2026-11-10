@@ -11,16 +11,13 @@
 <body>
     <header>
         <a href="/home">Главная</a>
-        <a href="/array">Массивы</a>
+        <a href="/array">Каталог</a>
     </header>
     <main>
-        <div>Основная часть</div>
-        <div>
-            <img src="{{ Vite::asset('resources/images/1.jpg') }}" alt="">
+        <div class="home_title">Мемо<span class="main_sp">Shop</span></div>
+        <div >
+            <img class="home_pic" src="{{ Vite::asset('resources/images/vasya.jpg') }}" alt="">
         </div>
     </main>
-    <footer>
-        Copyright Рудин Святослав Иванович 2026
-    </footer>
 </body>
 </html>

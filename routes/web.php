@@ -24,10 +24,16 @@ Route::get('/array/shuffle', [MainController::class, 'shuffleArray'])-> name('ar
 
 Route::get('/array/sort', [MainController::class, 'sortArray'])-> name('array.sort');
 
+Route::get('/array/usort', [MainController::class, 'usortArray'])-> name('array.usort');
+
 Route::get('/array/filter', [MainController::class, 'filterArray'])-> name('array.filter');
 
-Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+Route::get('/reports', function()
+{
+    return view('report.index');
+})->name('report.index');
 
-Route::get('/reports/create', function () {
-    return view('reports.create');
+Route::get('/reports/create', function()
+{
+    return view('report.create');
 })->name('reports.create');
