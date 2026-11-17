@@ -15,15 +15,16 @@
     </header>
     <main>
         <div>Основная часть</div>
-        <div class="card-grid">
-            @foreach ($reports as $report)
-                <div class="card">
-                    <p>{{ $report->number }}</p>
-                    <p>{{ $report->description }}</p>
-                    <p>{{ $report->created_at }}</p>
-                </div>
-            @endforeach
-        </div>
+        <a href="{{ route('reports.store') }}">Страница заявок</a>
+        <br>
+        <form method="POST" action="{{route('reports.store')}}">
+            @csrf
+            <input name="number" type="text" placeholder="Номер авто">
+            <br>
+            <input name="description" placeholder="Описание нарушения"></input>
+            <br>
+            <button type="submit">Отправить заявку</button>
+        </form>
     </main>
 </body>
 </html>

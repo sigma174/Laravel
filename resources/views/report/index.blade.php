@@ -14,6 +14,9 @@
     </header>
     <main>
         <div>Основная часть</div>
+        <a href="{{route('reports.create')}}">Создать заявку</a>
+        <br>
+        <a href="{{route('reports.store')}}">Страница заявок</a>
         <div class="card-grid">
             @foreach ($reports as $report)
                 <div class="card">
@@ -21,7 +24,14 @@
                     <p>{{ $report->description }}</p>
                     <p>{{ $report->created_at }}</p>
                 </div>
+
+                 <form action="{{ route('reports.destroy', $report->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Удалить">
+                </form>
             @endforeach
+        </form>
         </div>
     </main>
 </body>

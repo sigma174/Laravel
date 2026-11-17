@@ -11,4 +11,20 @@ class ReportController extends Controller
         $reports = Report::all();
         return view('report.index', compact('reports'));
     }
+
+    public function store(Request $request, Report $report) {
+        $data = $request -> validate([
+            'number' => 'required|string',
+            'description' => 'required|string',
+        ]);
+
+        $report->create($data);
+        return redirect()->route('reports.index');
+    }
+
+
+    public function destroy(Report $report){
+        $report -> delete();
+        return redirect()->route('reports.index');
+    }
 }
